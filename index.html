@@ -13,6 +13,10 @@
         }
         .nav-link:hover::after { width: 100%; }
         a { color: #2563eb; text-decoration: underline; }
+        .lang-zh { display: none; }
+        .lang-en { display: block; }
+        .show-zh .lang-zh { display: block; }
+        .show-zh .lang-en { display: none; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -21,14 +25,45 @@
 <nav class="fixed top-0 w-full bg-white/95 shadow-sm z-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-            <div class="font-bold text-xl">Portfolio | 个人主页</div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link relative">Home | 首页</a>
-                <a href="#about" class="nav-link relative">About | 关于我</a>
-                <a href="#skills" class="nav-link relative">Skills | 技能</a>
-                <a href="#projects" class="nav-link relative">Projects | 项目</a>
-                <a href="#resume" class="nav-link relative">Resume | 简历</a>
-                <a href="#contact" class="nav-link relative">Contact | 联系方式</a>
+            <div class="font-bold text-xl">
+                <span class="lang-en">Portfolio</span>
+                <span class="lang-zh">个人主页</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="nav-link relative">
+                    <span class="lang-en">Home</span>
+                    <span class="lang-zh">首页</span>
+                </a>
+                <a href="#about" class="nav-link relative">
+                    <span class="lang-en">About</span>
+                    <span class="lang-zh">关于我</span>
+                </a>
+                <a href="#skills" class="nav-link relative">
+                    <span class="lang-en">Skills</span>
+                    <span class="lang-zh">技能</span>
+                </a>
+                <a href="#projects" class="nav-link relative">
+                    <span class="lang-en">Projects</span>
+                    <span class="lang-zh">项目</span>
+                </a>
+                <a href="#resume" class="nav-link relative">
+                    <span class="lang-en">Resume</span>
+                    <span class="lang-zh">简历</span>
+                </a>
+                <a href="#contact" class="nav-link relative">
+                    <span class="lang-en">Contact</span>
+                    <span class="lang-zh">联系方式</span>
+                </a>
+                <button id="langToggle" class="ml-4 px-3 py-1 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700 transition-colors">
+                    <span class="lang-en">中文</span>
+                    <span class="lang-zh">English</span>
+                </button>
+            </div>
+            <div class="md:hidden flex items-center space-x-2">
+                <button id="langToggleMobile" class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm">
+                    <span class="lang-en">中文</span>
+                    <span class="lang-zh">EN</span>
+                </button>
             </div>
         </div>
     </div>
@@ -39,22 +74,38 @@
 =========================== -->
 <section id="home" class="pt-32 pb-20 px-4 text-center">
     <div class="max-w-6xl mx-auto">
-        <h1 class="text-4xl font-bold mb-2">Personal Portfolio</h1>
-        <h1 class="text-4xl font-bold mb-4">个人求职主页</h1>
+        <h1 class="text-4xl font-bold mb-4">
+            <span class="lang-en">Personal Portfolio</span>
+            <span class="lang-zh">个人求职主页</span>
+        </h1>
         <h2 class="text-2xl font-semibold mb-4">Jiang Yujie | 姜宇杰</h2>
         
         <!-- 一句话定位 -->
-        <p class="text-xl text-gray-600 mb-2">Data Science postgraduate with Applied Statistics background & enterprise data processing experience, focusing on data analysis, statistical modeling and machine learning.</p>
-        <p class="text-xl text-gray-600 mb-6">拥有应用统计学背景与企业数据处理经验的数据科学硕士在读生，专注于数据分析、统计建模与机器学习领域。</p>
+        <p class="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
+            <span class="lang-en">Data Science postgraduate with Applied Statistics background & enterprise data processing experience, focusing on data analysis, statistical modeling and machine learning.</span>
+            <span class="lang-zh">拥有应用统计学背景与企业数据处理经验的数据科学硕士在读生，专注于数据分析、统计建模与机器学习领域。</span>
+        </p>
         
         <!-- 目标岗位 -->
-        <p class="text-lg font-medium text-blue-700 mb-6">Target Positions | 目标岗位：Data Analyst | 数据分析师、Data Processing Specialist | 数据处理专员、Statistical Modeling Engineer | 统计建模工程师</p>
+        <p class="text-lg font-medium text-blue-700 mb-6">
+            <span class="lang-en">Target Positions：Data Analyst, Data Processing Specialist, Statistical Modeling Engineer</span>
+            <span class="lang-zh">目标岗位：数据分析师、数据处理专员、统计建模工程师</span>
+        </p>
 
         <div class="flex flex-wrap justify-center gap-2 mb-8">
             <span class="px-3 py-1 bg-blue-100 rounded-full text-sm">Python</span>
-            <span class="px-3 py-1 bg-blue-100 rounded-full text-sm">Data Processing</span>
-            <span class="px-3 py-1 bg-blue-100 rounded-full text-sm">Machine Learning</span>
-            <span class="px-3 py-1 bg-blue-100 rounded-full text-sm">Statistics</span>
+            <span class="px-3 py-1 bg-blue-100 rounded-full text-sm">
+                <span class="lang-en">Data Processing</span>
+                <span class="lang-zh">数据处理</span>
+            </span>
+            <span class="px-3 py-1 bg-blue-100 rounded-full text-sm">
+                <span class="lang-en">Machine Learning</span>
+                <span class="lang-zh">机器学习</span>
+            </span>
+            <span class="px-3 py-1 bg-blue-100 rounded-full text-sm">
+                <span class="lang-en">Statistics</span>
+                <span class="lang-zh">统计学</span>
+            </span>
             <span class="px-3 py-1 bg-blue-100 rounded-full text-sm">Excel</span>
             <span class="px-3 py-1 bg-blue-100 rounded-full text-sm">ERP</span>
         </div>
@@ -66,28 +117,34 @@
 =========================== -->
 <section id="about" class="py-20 bg-white px-4">
     <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">About Me | 关于我</h2>
+        <h2 class="text-3xl font-bold text-center mb-8">
+            <span class="lang-en">About Me</span>
+            <span class="lang-zh">关于我</span>
+        </h2>
         <div class="max-w-3xl mx-auto space-y-6">
             <div>
-                <p class="mb-1">I have a Bachelor’s degree in Applied Statistics and am pursuing a Master’s degree in Data Science. I have solid experience in data processing, document management and ERP system operation.</p>
-                <p class="text-gray-600">本人拥有应用统计学学士学位，目前就读数据科学硕士，具备数据处理、文档管理与ERP系统操作的扎实经验。</p>
+                <p class="mb-1 lang-en">I have a Bachelor’s degree in Applied Statistics and am pursuing a Master’s degree in Data Science. I have solid experience in data processing, document management and ERP system operation.</p>
+                <p class="text-gray-600 lang-zh">本人拥有应用统计学学士学位，目前就读数据科学硕士，具备数据处理、文档管理与ERP系统操作的扎实经验。</p>
             </div>
             <div>
-                <p class="mb-1">I am familiar with Python, basic AI concepts, common machine learning and deep learning models, as well as standard office tools.</p>
-                <p class="text-gray-600">熟悉Python、人工智能基础、常见机器学习与深度学习模型，熟练使用常用办公软件。</p>
+                <p class="mb-1 lang-en">I am familiar with Python, basic AI concepts, common machine learning and deep learning models, as well as standard office tools.</p>
+                <p class="text-gray-600 lang-zh">熟悉Python、人工智能基础、常见机器学习与深度学习模型，熟练使用常用办公软件。</p>
             </div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-6 mt-10 max-w-5xl mx-auto">
             <div class="p-6 bg-gray-50 rounded-xl">
-                <h3 class="font-semibold mb-3">Education Background | 教育背景</h3>
+                <h3 class="font-semibold mb-3">
+                    <span class="lang-en">Education Background</span>
+                    <span class="lang-zh">教育背景</span>
+                </h3>
                 <div class="space-y-4">
-                    <div>
+                    <div class="lang-en">
                         <p class="font-medium">Master of Science in Data Science</p>
                         <p class="text-sm">Lingnan University, Hong Kong</p>
                         <p class="text-sm text-gray-500">Aug 2025 – Expected Nov 2026</p>
                     </div>
-                    <div>
+                    <div class="lang-zh">
                         <p class="font-medium">数据科学理学硕士</p>
                         <p class="text-sm">香港岭南大学</p>
                         <p class="text-sm text-gray-500">2025年8月 – 预计2026年11月毕业</p>
@@ -95,12 +152,12 @@
                 </div>
 
                 <div class="border-t pt-4 mt-4">
-                    <div>
+                    <div class="lang-en">
                         <p class="font-medium">Bachelor of Science in Applied Statistics</p>
                         <p class="text-sm">Hubei University of Economics</p>
                         <p class="text-sm text-gray-500">Sep 2017 – Jun 2021</p>
                     </div>
-                    <div>
+                    <div class="lang-zh">
                         <p class="font-medium">应用统计学理学学士</p>
                         <p class="text-sm">湖北经济学院</p>
                         <p class="text-sm text-gray-500">2017年9月 – 2021年6月</p>
@@ -109,31 +166,30 @@
             </div>
 
             <div class="p-6 bg-gray-50 rounded-xl">
-                <h3 class="font-semibold mb-3">Work Experience | 工作经历</h3>
-                <div>
+                <h3 class="font-semibold mb-3">
+                    <span class="lang-en">Work Experience</span>
+                    <span class="lang-zh">工作经历</span>
+                </h3>
+                <div class="lang-en">
                     <p class="font-medium">Logistics Data Processor (Dispatch)</p>
-                    <p class="text-sm">Local State Grid Power Supply Company</p>
+                    <p class="text-sm">Local State Grid Power Supply Center</p>
                     <p class="text-sm text-gray-500">Feb 2024 – Jul 2025</p>
                 </div>
-                <div>
-                    <p class="font-medium">数据专员 (劳务派遣)</p>
-                    <p class="text-sm">当地国家电网供电公司</p>
+                <div class="lang-zh">
+                    <p class="font-medium">数据专员(劳务派遣)</p>
+                    <p class="text-sm">地方国家电网供电中心</p>
                     <p class="text-sm text-gray-500">2024年2月 – 2025年7月</p>
                 </div>
                 <div class="mt-2">
-                    <p class="text-sm">Main responsibilities:</p>
+                    <p class="text-sm font-medium lang-en">Main responsibilities:</p>
+                    <p class="text-sm font-medium lang-zh">主要职责：</p>
                     <ul class="text-sm list-disc ml-4 space-y-1">
-                        <li>Document filing & management</li>
-                        <li>ERP system operation</li>
-                        <li>Data processing with Excel</li>
-                    </ul>
-                </div>
-                <div class="mt-3">
-                    <p class="text-sm">主要职责：</p>
-                    <ul class="text-sm list-disc ml-4 space-y-1">
-                        <li>文档整理与管理</li>
-                        <li>ERP系统操作</li>
-                        <li>Excel数据处理</li>
+                        <li class="lang-en">Document filing & management</li>
+                        <li class="lang-zh">文档整理与管理</li>
+                        <li class="lang-en">ERP system operation</li>
+                        <li class="lang-zh">ERP系统操作</li>
+                        <li class="lang-en">Data processing with Excel</li>
+                        <li class="lang-zh">Excel数据处理</li>
                     </ul>
                 </div>
             </div>
@@ -146,39 +202,64 @@
 =========================== -->
 <section id="skills" class="py-20 px-4">
     <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-10">Skills | 技能</h2>
+        <h2 class="text-3xl font-bold text-center mb-10">
+            <span class="lang-en">Skills</span>
+            <span class="lang-zh">技能</span>
+        </h2>
         <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div class="p-6 bg-white rounded-xl shadow-sm">
-                <h3 class="font-semibold mb-3">Technical Skills | 技术技能</h3>
+                <h3 class="font-semibold mb-3">
+                    <span class="lang-en">Technical Skills</span>
+                    <span class="lang-zh">技术技能</span>
+                </h3>
                 <ul class="space-y-1 text-sm">
-                    <li>Basic computer knowledge | 计算机基础</li>
-                    <li>Python | Python编程</li>
-                    <li>Basic AI concepts | 人工智能基础</li>
-                    <li>Machine learning models | 机器学习模型</li>
-                    <li>Deep learning basics | 深度学习基础</li>
-                    <li>Statistical analysis | 统计分析</li>
+                    <li class="lang-en">Basic computer knowledge</li>
+                    <li class="lang-zh">计算机基础</li>
+                    <li>Python</li>
+                    <li class="lang-en">Basic AI concepts</li>
+                    <li class="lang-zh">人工智能基础</li>
+                    <li class="lang-en">Machine learning models</li>
+                    <li class="lang-zh">机器学习模型</li>
+                    <li class="lang-en">Deep learning basics</li>
+                    <li class="lang-zh">深度学习基础</li>
+                    <li class="lang-en">Statistical analysis</li>
+                    <li class="lang-zh">统计分析</li>
                 </ul>
             </div>
             <div class="p-6 bg-white rounded-xl shadow-sm">
-                <h3 class="font-semibold mb-3">Business Skills | 业务技能</h3>
+                <h3 class="font-semibold mb-3">
+                    <span class="lang-en">Business Skills</span>
+                    <span class="lang-zh">业务技能</span>
+                </h3>
                 <ul class="space-y-1 text-sm">
-                    <li>Data processing | 数据处理</li>
-                    <li>Document management | 文档管理</li>
-                    <li>ERP system operation | ERP系统操作</li>
-                    <li>Data sorting & statistics | 数据整理与统计</li>
-                    <li>Office work coordination | 办公事务协调</li>
+                    <li class="lang-en">Data processing</li>
+                    <li class="lang-zh">数据处理</li>
+                    <li class="lang-en">Document management</li>
+                    <li class="lang-zh">文档管理</li>
+                    <li class="lang-en">ERP system operation</li>
+                    <li class="lang-zh">ERP系统操作</li>
+                    <li class="lang-en">Data sorting & statistics</li>
+                    <li class="lang-zh">数据整理与统计</li>
+                    <li class="lang-en">Office work coordination</li>
+                    <li class="lang-zh">办公事务协调</li>
                 </ul>
             </div>
             <div class="p-6 bg-white rounded-xl shadow-sm">
-                <h3 class="font-semibold mb-3">Tools & Certificates | 工具与证书</h3>
+                <h3 class="font-semibold mb-3">
+                    <span class="lang-en">Tools & Certificates</span>
+                    <span class="lang-zh">工具与证书</span>
+                </h3>
                 <ul class="space-y-1 text-sm">
-                    <li>Excel, Word, Office | 办公软件</li>
-                    <li>ERP System | ERP系统</li>
-                    <li>Access | 数据库</li>
-                    <li>CET-4 | 大学英语四级</li>
-                    <li>IELTS 6.0 | 雅思6.0</li>
-                    <li>Driving License | 驾驶证</li>
-                    <li>Putonghua Level 2B | 普通话二乙</li>
+                    <li>Excel, Word, Office</li>
+                    <li>ERP System</li>
+                    <li>Access</li>
+                    <li class="lang-en">CET-4</li>
+                    <li class="lang-zh">大学英语四级</li>
+                    <li>IELTS 6.0</li>
+                    <li class="lang-en">Driving License</li>
+                    <li class="lang-zh">驾驶证</li>
+                    <li class="lang-en">Putonghua Level 2B</li>
+                    <li class="lang-zh">普通话二乙</li>
                 </ul>
             </div>
         </div>
@@ -190,46 +271,95 @@
 =========================== -->
 <section id="projects" class="py-20 bg-white px-4">
     <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-10">Projects | 项目展示</h2>
+        <h2 class="text-3xl font-bold text-center mb-10">
+            <span class="lang-en">Projects</span>
+            <span class="lang-zh">项目展示</span>
+        </h2>
         <div class="max-w-5xl mx-auto space-y-10">
 
             <!-- 项目1 -->
             <div class="p-6 border rounded-xl">
                 <h3 class="text-xl font-bold">Q-Learning Fight Simulator</h3>
-                <p class="text-gray-600 mb-4">Q-Learning 格斗对战模拟器</p>
+                <p class="text-gray-600 mb-4 lang-zh">Q-Learning 格斗对战模拟器</p>
                 <div class="space-y-3 text-sm">
-                    <div><p class="font-medium">Problem | 项目问题：</p><p>Build an AI fighter that can learn strategies through reinforcement learning.</p></div>
-                    <div><p></p><p>构建可通过强化学习自主学习策略的AI对战角色。</p></div>
-                    <div><p class="font-medium">Data | 数据：</p><p>Game state including position, HP, action status.</p></div>
-                    <div><p></p><p>游戏状态：位置、血量、动作状态。</p></div>
-                    <div><p class="font-medium">Approach | 方法：</p><p>Q-Learning algorithm, reward design, iterative training.</p></div>
-                    <div><p></p><p>Q-Learning算法、奖励函数设计、迭代训练。</p></div>
-                    <div><p class="font-medium">Outcome | 成果：</p><p>AI can fight automatically with stable strategy.</p></div>
-                    <div><p></p><p>AI可自主对战，策略稳定。</p></div>
-                    <div><p class="font-medium">My Contribution | 个人贡献：</p><p>Complete model design, coding and training.</p></div>
-                    <div><p></p><p>独立完成模型设计、代码实现与训练。</p></div>
-                    <!-- 新增GitHub仓库链接 -->
-                    <div><p class="font-medium">Repository | 代码仓库：</p><a href="https://github.com/GingerJuiceCola/Q_learning_fight_simulator" target="_blank">https://github.com/GingerJuiceCola/Q_learning_fight_simulator</a></div>
+                    <div>
+                        <p class="font-medium lang-en">Problem：</p>
+                        <p class="font-medium lang-zh">项目问题：</p>
+                        <p class="lang-en">Build an AI fighter that can learn strategies through reinforcement learning.</p>
+                        <p class="lang-zh">构建可通过强化学习自主学习策略的AI对战角色。</p>
+                    </div>
+                    <div>
+                        <p class="font-medium lang-en">Data：</p>
+                        <p class="font-medium lang-zh">数据：</p>
+                        <p class="lang-en">Game state including position, HP, action status.</p>
+                        <p class="lang-zh">游戏状态：位置、血量、动作状态。</p>
+                    </div>
+                    <div>
+                        <p class="font-medium lang-en">Approach：</p>
+                        <p class="font-medium lang-zh">方法：</p>
+                        <p class="lang-en">Q-Learning algorithm, reward design, iterative training.</p>
+                        <p class="lang-zh">Q-Learning算法、奖励函数设计、迭代训练。</p>
+                    </div>
+                    <div>
+                        <p class="font-medium lang-en">Outcome：</p>
+                        <p class="font-medium lang-zh">成果：</p>
+                        <p class="lang-en">AI can fight automatically with stable strategy.</p>
+                        <p class="lang-zh">AI可自主对战，策略稳定。</p>
+                    </div>
+                    <div>
+                        <p class="font-medium lang-en">My Contribution：</p>
+                        <p class="font-medium lang-zh">个人贡献：</p>
+                        <p class="lang-en">Complete model design, coding and training.</p>
+                        <p class="lang-zh">独立完成模型设计、代码实现与训练。</p>
+                    </div>
+                    <div>
+                        <p class="font-medium lang-en">Repository：</p>
+                        <p class="font-medium lang-zh">代码仓库：</p>
+                        <a href="https://github.com/GingerJuiceCola/Q_learning_fight_simulator" target="_blank">https://github.com/GingerJuiceCola/Q_learning_fight_simulator</a>
+                    </div>
                 </div>
             </div>
 
             <!-- 项目2 -->
             <div class="p-6 border rounded-xl">
                 <h3 class="text-xl font-bold">Energy Consumption Prediction</h3>
-                <p class="text-gray-600 mb-4">服务器能耗预测</p>
+                <p class="text-gray-600 mb-4 lang-zh">服务器能耗预测</p>
                 <div class="space-y-3 text-sm">
-                    <div><p class="font-medium">Problem | 项目问题：</p><p>Predict server energy use using machine learning.</p></div>
-                    <div><p></p><p>使用机器学习预测服务器能耗。</p></div>
-                    <div><p class="font-medium">Data | 数据：</p><p>Server hardware data + weather data.</p></div>
-                    <div><p></p><p>服务器硬件数据 + 天气数据。</p></div>
-                    <div><p class="font-medium">Approach | 方法：</p><p>Data cleaning, regression models, Random Forest and XGBoost comparison.</p></div>
-                    <div><p></p><p>数据清洗、回归模型、随机森林和XGBoost对比。</p></div>
-                    <div><p class="font-medium">Outcome | 成果：</p><p>High-precision prediction with clear metrics.</p></div>
-                    <div><p></p><p>高精度预测，指标清晰。</p></div>
-                    <div><p class="font-medium">My Contribution | 个人贡献：</p><p>Data processing, modeling and result analysis.</p></div>
-                    <div><p></p><p>数据处理、建模与结果分析。</p></div>
-                    <!-- 新增GitHub仓库链接 -->
-                    <div><p class="font-medium">Repository | 代码仓库：</p><a href="https://github.com/GingerJuiceCola/Energy-Consumption-Prediction" target="_blank">https://github.com/GingerJuiceCola/Energy-Consumption-Prediction</a></div>
+                    <div>
+                        <p class="font-medium lang-en">Problem：</p>
+                        <p class="font-medium lang-zh">项目问题：</p>
+                        <p class="lang-en">Predict server energy use using machine learning.</p>
+                        <p class="lang-zh">使用机器学习预测服务器能耗。</p>
+                    </div>
+                    <div>
+                        <p class="font-medium lang-en">Data：</p>
+                        <p class="font-medium lang-zh">数据：</p>
+                        <p class="lang-en">Server hardware data + weather data.</p>
+                        <p class="lang-zh">服务器硬件数据 + 天气数据。</p>
+                    </div>
+                    <div>
+                        <p class="font-medium lang-en">Approach：</p>
+                        <p class="font-medium lang-zh">方法：</p>
+                        <p class="lang-en">Data cleaning, regression models, Random Forest and XGBoost comparison.</p>
+                        <p class="lang-zh">数据清洗、回归模型、随机森林和XGBoost对比。</p>
+                    </div>
+                    <div>
+                        <p class="font-medium lang-en">Outcome：</p>
+                        <p class="font-medium lang-zh">成果：</p>
+                        <p class="lang-en">High-precision prediction with clear metrics.</p>
+                        <p class="lang-zh">高精度预测，指标清晰。</p>
+                    </div>
+                    <div>
+                        <p class="font-medium lang-en">My Contribution：</p>
+                        <p class="font-medium lang-zh">个人贡献：</p>
+                        <p class="lang-en">Data processing, modeling and result analysis.</p>
+                        <p class="lang-zh">数据处理、建模与结果分析。</p>
+                    </div>
+                    <div>
+                        <p class="font-medium lang-en">Repository：</p>
+                        <p class="font-medium lang-zh">代码仓库：</p>
+                        <a href="https://github.com/GingerJuiceCola/Energy-Consumption-Prediction" target="_blank">https://github.com/GingerJuiceCola/Energy-Consumption-Prediction</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -241,57 +371,104 @@
 =========================== -->
 <section id="resume" class="py-20 px-4">
     <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-10">Resume | 简历</h2>
+        <h2 class="text-3xl font-bold text-center mb-10">
+            <span class="lang-en">Resume</span>
+            <span class="lang-zh">简历</span>
+        </h2>
         <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-sm">
             <div class="space-y-6">
                 <div>
-                    <h3 class="font-semibold">Education | 教育经历</h3>
-                    <div class="mt-2 space-y-3 text-sm">
-                        <p>Master of Science in Data Science | 数据科学理学硕士</p>
-                        <p>Lingnan University, Hong Kong | 香港岭南大学</p>
-                        <p>Aug 2025 – Expected Nov 2026 | 2025.08 – 预计2026.11</p>
+                    <h3 class="font-semibold">
+                        <span class="lang-en">Education</span>
+                        <span class="lang-zh">教育经历</span>
+                    </h3>
+                    <div class="mt-2 space-y-3 text-sm lang-en">
+                        <p>Master of Science in Data Science</p>
+                        <p>Lingnan University, Hong Kong</p>
+                        <p class="text-gray-500">Aug 2025 – Expected Nov 2026</p>
                     </div>
-                    <div class="mt-3 space-y-3 text-sm">
-                        <p>Bachelor of Science in Applied Statistics | 应用统计学理学学士</p>
-                        <p>Hubei University of Economics | 湖北经济学院</p>
-                        <p>Sep 2017 – Jun 2021 | 2017.09 – 2021.06</p>
+                    <div class="mt-2 space-y-3 text-sm lang-zh">
+                        <p>数据科学理学硕士</p>
+                        <p>香港岭南大学</p>
+                        <p class="text-gray-500">2025.08 – 预计2026.11</p>
+                    </div>
+                    <div class="mt-3 space-y-3 text-sm lang-en">
+                        <p>Bachelor of Science in Applied Statistics</p>
+                        <p>Hubei University of Economics</p>
+                        <p class="text-gray-500">Sep 2017 – Jun 2021</p>
+                    </div>
+                    <div class="mt-3 space-y-3 text-sm lang-zh">
+                        <p>应用统计学理学学士</p>
+                        <p>湖北经济学院</p>
+                        <p class="text-gray-500">2017.09 – 2021.06</p>
                     </div>
                 </div>
 
                 <div class="border-t pt-6">
-                    <h3 class="font-semibold">Work Experience | 工作经历</h3>
-                    <div class="mt-2 text-sm">
-                        <p>Logistics Data Processor (Dispatch) | 后勤数据专员（劳务派遣）</p>
-                        <p>Local State Grid Power Supply Company | 地方国网供电公司</p>
-                        <p>Feb 2024 – Jul 2025 | 2024.02 – 2025.07</p>
+                    <h3 class="font-semibold">
+                        <span class="lang-en">Work Experience</span>
+                        <span class="lang-zh">工作经历</span>
+                    </h3>
+                    <div class="mt-2 text-sm lang-en">
+                        <p class="font-medium">Logistics Data Processor (Dispatch)</p>
+                        <p>Local State Grid Power Supply Company</p>
+                        <p class="text-gray-500">Feb 2024 – Jul 2025</p>
                         <ul class="list-disc ml-4 mt-2 space-y-1">
-                            <li>Document management | 文档管理</li>
-                            <li>ERP system operation | ERP系统操作</li>
-                            <li>Excel data processing | Excel数据处理</li>
+                            <li>Document management</li>
+                            <li>ERP system operation</li>
+                            <li>Excel data processing</li>
+                        </ul>
+                    </div>
+                    <div class="mt-2 text-sm lang-zh">
+                        <p class="font-medium">后勤数据专员（劳务派遣）</p>
+                        <p>地方国网供电公司</p>
+                        <p class="text-gray-500">2024.02 – 2025.07</p>
+                        <ul class="list-disc ml-4 mt-2 space-y-1">
+                            <li>文档管理</li>
+                            <li>ERP系统操作</li>
+                            <li>Excel数据处理</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="border-t pt-6">
-                    <h3 class="font-semibold">Projects | 项目经历</h3>
-                    <div class="mt-2 text-sm space-y-3">
-                        <p>1. Q-Learning Fight Simulator | Q-Learning格斗对战模拟器</p>
-                        <p>Independently developed an AI combat system using reinforcement learning | 基于强化学习独立开发AI格斗系统，完成模型训练与代码实现</p>
+                    <h3 class="font-semibold">
+                        <span class="lang-en">Projects</span>
+                        <span class="lang-zh">项目经历</span>
+                    </h3>
+                    <div class="mt-2 text-sm space-y-3 lang-en">
+                        <p class="font-medium">1. Q-Learning Fight Simulator</p>
+                        <p>Independently developed an AI combat system using reinforcement learning</p>
                     </div>
-                    <div class="mt-2 text-sm space-y-3">
-                        <p>2. Energy Consumption Prediction | 服务器能耗预测</p>
-                        <p>Used machine learning models for data analysis and energy consumption prediction | 运用机器学习模型进行数据分析，实现服务器能耗精准预测</p>
+                    <div class="mt-2 text-sm space-y-3 lang-zh">
+                        <p class="font-medium">1. Q-Learning格斗对战模拟器</p>
+                        <p>基于强化学习独立开发AI格斗系统，完成模型训练与代码实现</p>
+                    </div>
+                    <div class="mt-4 text-sm space-y-3 lang-en">
+                        <p class="font-medium">2. Energy Consumption Prediction</p>
+                        <p>Used machine learning models for data analysis and energy consumption prediction</p>
+                    </div>
+                    <div class="mt-4 text-sm space-y-3 lang-zh">
+                        <p class="font-medium">2. 服务器能耗预测</p>
+                        <p>运用机器学习模型进行数据分析，实现服务器能耗精准预测</p>
                     </div>
                 </div>
 
                 <div class="border-t pt-6">
-                    <h3 class="font-semibold">Certificates | 证书</h3>
+                    <h3 class="font-semibold">
+                        <span class="lang-en">Certificates</span>
+                        <span class="lang-zh">证书</span>
+                    </h3>
                     <ul class="mt-2 text-sm space-y-1 list-disc ml-4">
-                        <li>National Computer Rank Examination (Access, Level 2) | 计算机二级Access</li>
-                        <li>Putonghua Proficiency Test (Level 2B) | 普通话二级乙等</li>
-                        <li>Driving License | 机动车驾驶证</li>
-                        <li>College English Test Band 4 (CET-4) | 大学英语四级</li>
-                        <li>IELTS 6.0 | 雅思6.0</li>
+                        <li class="lang-en">National Computer Rank Examination (Access, Level 2)</li>
+                        <li class="lang-zh">计算机二级Access</li>
+                        <li class="lang-en">Putonghua Proficiency Test (Level 2B)</li>
+                        <li class="lang-zh">普通话二级乙等</li>
+                        <li class="lang-en">Driving License</li>
+                        <li class="lang-zh">机动车驾驶证</li>
+                        <li class="lang-en">College English Test Band 4 (CET-4)</li>
+                        <li class="lang-zh">大学英语四级</li>
+                        <li>IELTS 6.0</li>
                     </ul>
                 </div>
             </div>
@@ -304,17 +481,53 @@
 =========================== -->
 <section id="contact" class="py-20 bg-white px-4">
     <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-center mb-8">Contact | 联系方式</h2>
+        <h2 class="text-3xl font-bold text-center mb-8">
+            <span class="lang-en">Contact</span>
+            <span class="lang-zh">联系方式</span>
+        </h2>
         <div class="max-w-sm mx-auto">
-            <p class="mb-1">Email | 邮箱：yujie.jiang0815@outlook.com</p>
-            <p class="mb-1">Name | 姓名：Jiang Yujie | 姜宇杰</p>
+            <p class="mb-1">
+                <span class="lang-en">Email：</span>
+                <span class="lang-zh">邮箱：</span>
+                yujie.jiang0815@outlook.com
+            </p>
+            <p class="mb-1">
+                <span class="lang-en">Name：</span>
+                <span class="lang-zh">姓名：</span>
+                Jiang Yujie | 姜宇杰
+            </p>
         </div>
     </div>
 </section>
 
 <footer class="py-6 text-center text-gray-500 text-sm">
-    <p>© 2026 Personal Job-Seeking Website | 个人求职网站 All Rights Reserved.</p>
+    <p>
+        <span class="lang-en">© 2026 Personal Job-Seeking Website All Rights Reserved.</span>
+        <span class="lang-zh">© 2026 个人求职网站 版权所有。</span>
+    </p>
 </footer>
+
+<script>
+    // 语言切换功能
+    const langToggle = document.getElementById('langToggle');
+    const langToggleMobile = document.getElementById('langToggleMobile');
+    const html = document.documentElement;
+    
+    // 检查本地存储的语言偏好
+    const savedLang = localStorage.getItem('lang');
+    if (savedLang === 'zh') {
+        html.classList.add('show-zh');
+    }
+    
+    function toggleLang() {
+        html.classList.toggle('show-zh');
+        const isZh = html.classList.contains('show-zh');
+        localStorage.setItem('lang', isZh ? 'zh' : 'en');
+    }
+    
+    langToggle.addEventListener('click', toggleLang);
+    langToggleMobile.addEventListener('click', toggleLang);
+</script>
 
 </body>
 </html>
