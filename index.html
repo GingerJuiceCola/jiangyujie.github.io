@@ -12,6 +12,7 @@
             background-color: #2563eb; transition: width 0.3s;
         }
         .nav-link:hover::after { width: 100%; }
+        a { color: #2563eb; text-decoration: underline; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -34,12 +35,14 @@
 </nav>
 
 <!-- ==========================
-1. HOME 首页（已双语+已填好）
+1. HOME 首页（添加姓名）
 =========================== -->
 <section id="home" class="pt-32 pb-20 px-4 text-center">
     <div class="max-w-6xl mx-auto">
         <h1 class="text-4xl font-bold mb-2">Personal Portfolio</h1>
         <h1 class="text-4xl font-bold mb-4">个人求职主页</h1>
+        <!-- 新增姓名 -->
+        <h2 class="text-2xl font-semibold mb-4">Jiang Yujie | 姜宇杰</h2>
         <p class="text-xl text-gray-600 mb-2">Seeking data-related positions compatible with Applied Statistics and Data Science</p>
         <p class="text-xl text-gray-600 mb-6">求职方向：应用统计学与数据科学相关岗位</p>
 
@@ -55,7 +58,7 @@
 </section>
 
 <!-- ==========================
-2. ABOUT ME 关于我（全双语+已填好）
+2. ABOUT ME 关于我
 =========================== -->
 <section id="about" class="py-20 bg-white px-4">
     <div class="max-w-6xl mx-auto">
@@ -130,7 +133,7 @@
 </section>
 
 <!-- ==========================
-3. SKILLS 技能（全双语+已填好）
+3. SKILLS 技能
 =========================== -->
 <section id="skills" class="py-20 px-4">
     <div class="max-w-6xl mx-auto">
@@ -174,7 +177,7 @@
 </section>
 
 <!-- ==========================
-4. PROJECTS 项目（按PDF要求+双语）
+4. PROJECTS 项目（添加GitHub链接）
 =========================== -->
 <section id="projects" class="py-20 bg-white px-4">
     <div class="max-w-6xl mx-auto">
@@ -196,6 +199,8 @@
                     <div><p></p><p>AI可自主对战，策略稳定。</p></div>
                     <div><p class="font-medium">My Contribution | 个人贡献：</p><p>Complete model design, coding and training.</p></div>
                     <div><p></p><p>独立完成模型设计、代码实现与训练。</p></div>
+                    <!-- 新增GitHub仓库链接 -->
+                    <div><p class="font-medium">Repository | 代码仓库：</p><a href="https://github.com/GingerJuiceCola/Q_learning_fight_simulator" target="_blank">https://github.com/GingerJuiceCola/Q_learning_fight_simulator</a></div>
                 </div>
             </div>
 
@@ -214,6 +219,8 @@
                     <div><p></p><p>高精度预测，指标清晰。</p></div>
                     <div><p class="font-medium">My Contribution | 个人贡献：</p><p>Data processing, modeling and result analysis.</p></div>
                     <div><p></p><p>数据处理、建模与结果分析。</p></div>
+                    <!-- 新增GitHub仓库链接 -->
+                    <div><p class="font-medium">Repository | 代码仓库：</p><a href="https://github.com/GingerJuiceCola/Energy-Consumption-Prediction" target="_blank">https://github.com/GingerJuiceCola/Energy-Consumption-Prediction</a></div>
                 </div>
             </div>
         </div>
@@ -221,7 +228,7 @@
 </section>
 
 <!-- ==========================
-5. RESUME 简历（全双语+已填好）
+5. RESUME 简历（新增项目经历）
 =========================== -->
 <section id="resume" class="py-20 px-4">
     <div class="max-w-6xl mx-auto">
@@ -256,6 +263,19 @@
                     </div>
                 </div>
 
+                <!-- 新增：项目经历 -->
+                <div class="border-t pt-6">
+                    <h3 class="font-semibold">Projects | 项目经历</h3>
+                    <div class="mt-2 text-sm space-y-3">
+                        <p>1. Q-Learning Fight Simulator | Q-Learning格斗对战模拟器</p>
+                        <p>Independently developed an AI combat system using reinforcement learning | 基于强化学习独立开发AI格斗系统，完成模型训练与代码实现</p>
+                    </div>
+                    <div class="mt-2 text-sm space-y-3">
+                        <p>2. Energy Consumption Prediction | 服务器能耗预测</p>
+                        <p>Used machine learning models for data analysis and energy consumption prediction | 运用机器学习模型进行数据分析，实现服务器能耗精准预测</p>
+                    </div>
+                </div>
+
                 <div class="border-t pt-6">
                     <h3 class="font-semibold">Certificates | 证书</h3>
                     <ul class="mt-2 text-sm space-y-1 list-disc ml-4">
@@ -272,13 +292,14 @@
 </section>
 
 <!-- ==========================
-6. CONTACT 联系方式（双语）
+6. CONTACT 联系方式
 =========================== -->
 <section id="contact" class="py-20 bg-white px-4">
     <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">Contact | 联系方式</h2>
+        <h2 class="text-3xl font-bold text-center mb-8">Contact | 联系方式</h2>
         <div class="max-w-sm mx-auto">
             <p class="mb-1">Email | 邮箱：yujie.jiang0815@outlook.com</p>
+            <p class="mb-1">Name | 姓名：Jiang Yujie | 姜宇杰</p>
         </div>
     </div>
 </section>
